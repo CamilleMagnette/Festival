@@ -66,22 +66,24 @@ with tab2 :
     # Groupby par titre pour avoir la somme des streams de chaque titre
     top_by_title = df_top_200.groupby(['title', 'artist']).sum()
 
-    # Filtrer les 10 titres ayant la valeur de stream maximale
-    top10 = top_by_title.sort_values('streams', ascending=False).head(10)
-
+    # Filtrer les 10 titres ayant la valeur de stream maximale et trier les données
+    top10 = top_by_title.sort_values('streams', ascending=True).tail(10)
+    
     # Créer une liste contenant le titre et l'artiste pour chaque titre dans top10
     titles_artists = [f"{title} - {artist}" for title, artist in top10.index]
+
 
     # Créer le graphique
     fig, ax = plt.subplots(figsize=(10, 6))
 
     # Ajouter les barres pour les streams
-    ax.bar(titles_artists, top10['streams'], color='blue')
+    ax.barh(titles_artists, top10['streams'], color="blue")
+
 
     # Configurer le graphique
     ax.set_title('Top 10 titres', fontsize=16)
-    ax.set_xlabel('Titre - Artiste', fontsize=12)
-    ax.set_ylabel('Stream (en millions)', fontsize=12)
+    ax.set_ylabel('Titre - Artiste', fontsize=12)
+    ax.set_xlabel('Stream (en millions)', fontsize=12)
 
     plt.xticks(rotation=90)
 
