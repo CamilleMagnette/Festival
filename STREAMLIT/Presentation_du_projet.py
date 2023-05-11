@@ -117,7 +117,7 @@ with tab4 :
     # NOTRE PROPOSITION PAR ETAPE
 
     # création de la grille horizontale
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
 
     with col1 :
         lunettes = Image.open('images/image_lunette.jpg')
@@ -132,10 +132,6 @@ with tab4 :
         st.write("3) Performance et positionnement des artistes managés") 
         st.write("4) Recommandation d'artistes à pousser pour le festival") 
         st.write("5) Recommandation de programmation sur deux jours") 
-        
-    with col3 :
-
-        st.write(" ") 
 
     
     
