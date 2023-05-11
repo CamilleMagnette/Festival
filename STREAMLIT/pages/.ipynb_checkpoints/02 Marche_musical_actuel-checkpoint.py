@@ -16,10 +16,8 @@ df_top_200 = pd.read_csv("datasets/top_200.csv", sep = ",")
 # Afficher le dataframe
 # st.write(df_top_200)
 
-
 # CREER DES TAB 
 tab1, tab2, tab3, tab4, tab5 = st.tabs(['TOP 10 ARTISTES', 'TOP 10 MORCEAUX', 'TOP 10 PEPITES', 'BOX PLOT', 'BACK UP'])
-
 
 
 # TRAVAILLER SUR LES TAB 
@@ -93,35 +91,25 @@ with tab1 :
     
 with tab2 : 
     
-    st.subheader('Morceaux les plus streamés en 2021 - total MONDE')
+    st.subheader('Morceaux les plus streamés en 2021 - Total MONDE')
     
-    # Groupby par titre pour avoir la somme des streams de chaque titre
-    top_by_title = df_top_200.groupby(['title', 'artist']).sum()
+    df3 = df_top_200
+    df3_global = df3[df3['region']=='Global'].copy()
+    df_grouped_global_titre = df3_global.groupby('title').agg({'streams': 'max', 'artist': lambda x: x.iloc[0]}).reset_index()
+    
+    df_grouped_global_titre_sorted = df_grouped_global_titre.sort_values(by='streams', ascending=False)
 
     # Filtrer les 10 titres ayant la valeur de stream maximale et trier les données
-    top10 = top_by_title.sort_values('streams', ascending=True).tail(10)
+    df_grouped_global_titre_sorted = df_grouped_global_titre_sorted.sort_values('streams', ascending=False).head(10)
     
-    # Créer une liste contenant le titre et l'artiste pour chaque titre dans top10
-    titles_artists = [f"{title} - {artist}" for title, artist in top10.index]
-
-
     # Créer le graphique
-    fig, ax = plt.subplots(figsize=(10, 6))
+    fig5, ax = plt.subplots(figsize=(10, 6))
 
     # Ajouter les barres pour les streams
-    colors = plt.cm.YlGnBu(np.linspace(0, 1, len(top10)))
-    ax.barh(titles_artists, top10['streams'], color=colors)
-
-
-    # Configurer le graphique
-    ax.set_title('Top 10 titres', fontsize=16)
-    ax.set_xlabel('Stream (en millions)', fontsize=12)
-    ax.set_ylabel('Titre - Artiste', fontsize=12)
-
-    plt.xticks(rotation=90)
-
+    fig5 = px.bar(df_grouped_global_titre_sorted, x = 'title', y ='streams', color = 'artist')
+    
     # Afficher le graphique
-    st.pyplot(fig.figure)
+    st.plotly_chart(fig5)
 
     
 with tab3 : 
@@ -166,60 +154,64 @@ with tab4 :
     mask = df3['date'] > '2020-12-31'
     df3 = df3[mask].copy()
     
-    Q3_FR = df_grouped_france_titre['streams'].quantile(0.75)
-    df_stat_frQ3 = df_grouped_france_titre[df_grouped_france_titre['streams']>Q3_FR]
-
-    # BOXPLOT sur la distribution du stream pour le df France 2021, minimum fixé au Q3
-    #fig, ax = plt.subplots(figsize=(10, 6))
-    fig1 = px.box(df_stat_frQ3, x='streams', orientation='h', boxmode='overlay', color_discrete_sequence=['blue'], title='Artistes FRANCE')
-
-    # Afficher le graphique plotly
-    st.plotly_chart(fig1)
-   
-
-    df3_global = df3[df3['region']=='Global'].copy()
-    df_grouped_global_titre = df3_global.groupby('title').agg({'streams': 'max', 'artist': lambda x: x.iloc[0]}).reset_index()
-
-    Q3_GB = df_grouped_global_titre['streams'].quantile(0.75)
-    df_stat_gbQ3 = df_grouped_global_titre[df_grouped_global_titre['streams']>Q3_GB]
-
-    fig2 = px.box(df_stat_gbQ3, x='streams', orientation='h', boxmode='overlay', color_discrete_sequence=['blue'], title='Artistes MONDE')
-
-    # Afficher le graphique plotly
-    st.plotly_chart(fig2)
+    # création de la grille horizontale
+    col1, col2 = st.columns(2)
     
+    with col1 :
+    
+        Q3_FR = df_grouped_france_titre['streams'].quantile(0.75)
+        df_stat_frQ3 = df_grouped_france_titre[df_grouped_france_titre['streams']>Q3_FR]
+
+        # BOXPLOT sur la distribution du stream pour le df France 2021, minimum fixé au Q3
+        #fig, ax = plt.subplots(figsize=(10, 6))
+        fig1 = px.box(df_stat_frQ3, x='streams', orientation='h', boxmode='overlay', color_discrete_sequence=['blue'], title='STREAMS FRANCE')
+
+        # Afficher le graphique plotly
+        st.plotly_chart(fig1)
+   
+    with col2 :
+
+        df3_global = df3[df3['region']=='Global'].copy()
+        df_grouped_global_titre = df3_global.groupby('title').agg({'streams': 'max', 'artist': lambda x: x.iloc[0]}).reset_index()
+
+        Q3_GB = df_grouped_global_titre['streams'].quantile(0.75)
+        df_stat_gbQ3 = df_grouped_global_titre[df_grouped_global_titre['streams']>Q3_GB]
+
+        fig2 = px.box(df_stat_gbQ3, x='streams', orientation='h', boxmode='overlay', color_discrete_sequence=['blue'], title='STREAMS MONDE')
+
+        # Afficher le graphique plotly
+        st.plotly_chart(fig2)
+    
+
 
 with tab5 : 
-
-    st.subheader('BLABLABLA')
-   
-    # Filtrer les données pour la région France
-    top_200_france = df_top_200[df_top_200['region'] == 'France']
-
-    # Regrouper les données par artiste et calculer le nombre total de streams pour chaque artiste
-    artist_streams = top_200_france.groupby('artist')['streams'].sum()
-
-    # Ajouter une colonne pour le trend de chaque artiste (MOVE_UP, SAME_POSITION, ou MOVE_DOWN)
-    artist_trend = top_200_france.groupby('artist')['trend'].max()
-    artist_streams_trend = pd.concat([artist_streams, artist_trend], axis=1)
-
-    # Trier les artistes en fonction de leur position dans le top 200
-    top_artists = artist_streams_trend.sort_values('streams', ascending=False)[:10]
-
-    # Créer le graphique à bulles
-    fig3, ax = plt.subplots(figsize=(12,8))
-    for artist, row in top_artists.iterrows():
-        ax.scatter(artist, row['streams'], s=row['streams']/100000, alpha=0.5)
-        ax.annotate(artist, (artist, row['streams']), ha='center')
-
-    pd.options.display.float_format = '{:.0f}'.format
-
     
+    st.subheader('Morceaux les plus streamés en 2021 - total MONDE')
+    
+    # Groupby par titre pour avoir la somme des streams de chaque titre
+    top_by_title = df_top_200.groupby(['title', 'artist']).sum()
+
+    # Filtrer les 10 titres ayant la valeur de stream maximale et trier les données
+    top10 = top_by_title.sort_values('streams', ascending=True).tail(10)
+    
+    # Créer une liste contenant le titre et l'artiste pour chaque titre dans top10
+    titles_artists = [f"{title} - {artist}" for title, artist in top10.index]
+
+
+    # Créer le graphique
+    fig, ax = plt.subplots(figsize=(10, 6))
+
+    # Ajouter les barres pour les streams
+    colors = plt.cm.YlGnBu(np.linspace(0, 1, len(top10)))
+    ax.barh(titles_artists, top10['streams'], color=colors)
+
+
     # Configurer le graphique
-    ax.set_title('Artistes français', fontsize=16)
-    ax.set_xlabel('Artistes', fontsize=12)
-    ax.set_ylabel('Nombre total de streams (Milliards)', fontsize=12)
-    ax.grid(True)
+    ax.set_title('Top 10 titres', fontsize=16)
+    ax.set_xlabel('Stream (en millions)', fontsize=12)
+    ax.set_ylabel('Titre - Artiste', fontsize=12)
+
+    plt.xticks(rotation=90)
 
     # Afficher le graphique
-    st.pyplot(fig3.figure)
+    st.pyplot(fig.figure)
