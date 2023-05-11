@@ -77,13 +77,14 @@ with tab2 :
     fig, ax = plt.subplots(figsize=(10, 6))
 
     # Ajouter les barres pour les streams
-    ax.barh(titles_artists, top10['streams'], color="blue")
+    colors = plt.cm.YlGnBu(np.linspace(0, 1, len(top10)))
+    ax.barh(titles_artists, top10['streams'], color=colors)
 
 
     # Configurer le graphique
     ax.set_title('Top 10 titres', fontsize=16)
-    ax.set_ylabel('Titre - Artiste', fontsize=12)
     ax.set_xlabel('Stream (en millions)', fontsize=12)
+    ax.set_ylabel('Titre - Artiste', fontsize=12)
 
     plt.xticks(rotation=90)
 
