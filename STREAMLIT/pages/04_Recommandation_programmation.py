@@ -8,7 +8,7 @@ import seaborn as sns
 
 
 # Afficher notre logo dans le sidebar
-notre_logo = Image.open('images/logo.png')
+notre_logo = Image.open('STREAMLIT/images/logo.png')
 image_container = st.container()
 with image_container:
     st.sidebar.image(notre_logo, width=300)
@@ -19,9 +19,9 @@ st.subheader('Quels artistes, à quel moment ? ')
 
 
 # Importer le dataset : Janvier 2017 à dec 2021
-df_top_200 = pd.read_csv("datasets/top_200.csv", sep = ",")
+df_top_200 = pd.read_csv("STREAMLIT/datasets/top_200.csv", sep = ",")
 # Importer le dataset Amine : 
-df_dataset = pd.read_csv("datasets/dataset.csv", sep = ",")
+df_dataset = pd.read_csv("STREAMLIT/datasets/dataset.csv", sep = ",")
 # Afficher le dataframe
 # st.write(df_top_200)
 
@@ -43,7 +43,7 @@ with tab1 :
         st.subheader('Trouver un bon équilibre entre pépites et étoiles')
         st.write(' ')
 
-        image_reco_prog = Image.open('images/reco progr.png')
+        image_reco_prog = Image.open('STREAMLIT/images/reco progr.png')
 
         image_container = st.container()
         with image_container:
@@ -87,7 +87,7 @@ with tab1 :
     
 with tab2 : 
     
-    image_reco_prog_2 = Image.open('images/reco programmation 2.png')
+    image_reco_prog_2 = Image.open('STREAMLIT/images/reco programmation 2.png')
 
     image_container = st.container()
     with image_container:
@@ -123,7 +123,7 @@ with tab3 :
         st.write(' ')
         st.write(' ')
 
-        prestation = Image.open('images/prestations.png')
+        prestation = Image.open('STREAMLIT/images/prestations.png')
 
         image_container = st.container()
         with image_container:
