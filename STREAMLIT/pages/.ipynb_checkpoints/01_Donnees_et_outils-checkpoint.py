@@ -32,7 +32,6 @@ st.markdown("# DONNÉES ET OUTILS 🔧")
 # Ajouter espaces
 #st.markdown("<br><br>", unsafe_allow_html=True)
 
-main_container = st.container()
 
 data_container, sep_container, stack_container = main_container.columns([6, 1, 3])
     
