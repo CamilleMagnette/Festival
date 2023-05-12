@@ -10,7 +10,7 @@ Produire une analyse basée sur des données, qui aidera les acteurs du marché 
 
 Problémtique et analyse libre !
 
-**Durée du projet** : 28h
+**Délai** : 28h
 
 **Programmation** :   Python (plotly, Seaborn) avec JupiterLab, Streamlit, github 
 
