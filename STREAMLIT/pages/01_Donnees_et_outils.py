@@ -13,8 +13,7 @@ import pandas as pd
 ##################################################################################################################################
 ########### Preparation :
 
-df = pd.read_csv('datasets/top_200.csv')
-
+df = pd.read_csv('festival/STREAMLIT/datasets/top_200.csv')
 ##### images 
 logopython = Image.open('festival/STREAMLIT/images/logopython.png')
 logoseaborn = Image.open('festival/STREAMLIT/images/logoseaborn.png')
