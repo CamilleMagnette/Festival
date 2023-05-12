@@ -11,8 +11,11 @@ st.subheader('Les talents du moment...et jeunes talents à venir')
 #st.sidebar.markdown("# Les talents du moment 🎼")
 
 
-# Importer le dataset : Janvier 2017 à dec 2021
+# Importer le dataset TOP 2000 : Janvier 2017 à dec 2021
 df_top_200 = pd.read_csv("datasets/top_200.csv", sep = ",")
+# Importer le dataset Amine : 
+df_dataset = pd.read_csv("datasets/dataset.csv", sep = ",")
+
 # Afficher le dataframe
 # st.write(df_top_200)
 
@@ -229,9 +232,9 @@ with tab5 :
     st.subheader('NIVEAU DE DANCEABILITY SUR LE TOP 10 DES GENRES LES PLUS POPULAIRES ')
 
     """
-    top_10_genres = df['track_genre'].value_counts().head(10)
-    print(top_10_genres)
-    top_10 = df.nsmallest(10, 'popularity')
+    CHARGER LE DATASET
+    top_10_genres = df_dataset['track_genre'].value_counts().head(10)
+    top_10 = df_dataset.nsmallest(10, 'popularity')
     top_10_genre_counts = top_10['track_genre'].value_counts()
     print(top_10_genre_counts)
 
