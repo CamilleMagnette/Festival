@@ -13,12 +13,12 @@ import pandas as pd
 ##################################################################################################################################
 ########### Preparation :
 
-df = pd.read_csv('festival/STREAMLIT/datasets/top_200.csv')
+df = pd.read_csv('STREAMLIT/datasets/top_200.csv')
 ##### images 
-logopython = Image.open('festival/STREAMLIT/images/logopython.png')
-logoseaborn = Image.open('festival/STREAMLIT/images/logoseaborn.png')
-logoplotly = Image.open('festival/STREAMLIT/images/logoplotly.png')
-logostream = Image.open('festival/STREAMLIT/images/logostreamlit.png')
+logopython = Image.open('STREAMLIT/images/logopython.png')
+logoseaborn = Image.open('STREAMLIT/images/logoseaborn.png')
+logoplotly = Image.open('STREAMLIT/images/logoplotly.png')
+logostream = Image.open('STREAMLIT/images/logostreamlit.png')
 
 st.markdown("# DONNÉES ET OUTILS 🔧")
 # st.subheader('BLABLABLA')
