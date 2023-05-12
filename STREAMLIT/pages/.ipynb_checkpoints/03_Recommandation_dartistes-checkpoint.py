@@ -31,7 +31,7 @@ kali = Image.open('images/kaliu.jpg')
 vege = Image.open('images/vege.jpeg')
 ziak = Image.open('images/ziak.jpg')
 
-st.markdown("# VOS 10 ARTISTES 💜 ")
+st.markdown("# VOS 10 ARTISTES A PROMOUVOIR 💜 ")
 # st.subheader('BLABLABLA')
 
 ##################################################################################################################################
@@ -59,7 +59,7 @@ with tab1 :
         #nom de l'artiste
         st.markdown('<p style="color: #FFD700; font-size: 35px; text-align: center;">Lisa</p>', unsafe_allow_html=True)
          # texte
-        st.markdown('<p style="color: #25316D; font-size: 16px; text-align: center;">Pourquoi est-elle dans notre sélection : Troisième membre de Blackpink à faire ses débuts en solo, son album Lalisa sort le 10 septembre 2021 et cumule plus de 2,5 millions de téléchargements sur deux morceaux le premier jour. Le 22 octobre son titre “MONEY” comptera à lui seul plus de 4,3 millions de téléchargements.Attention à sa fanbase qui déplacera des montagnes…</p>', unsafe_allow_html=True)
+        st.markdown('<p style="color: #25316D; font-size: 16px; text-align: center;">Pourquoi est-elle dans notre sélection : Troisième membre de Blackpink à faire ses débuts en solo, son album Lalisa sort le 10 septembre 2021 et cumule plus de 2,5 millions de streams sur deux morceaux le premier jour. Le 22 octobre son titre “MONEY” comptera à lui seul plus de 4,3 millions de streams. Attention à sa fanbase qui déplacera des montagnes…</p>', unsafe_allow_html=True)
         st.markdown('<p style="color: #25316D; font-size: 16px; text-align: center;">Style musical : K-pop</p>', unsafe_allow_html=True)
         st.markdown('<p style="color: #25316D; font-size: 16px; text-align: center;">Programmation : Star globale</p>', unsafe_allow_html=True)
 
@@ -144,7 +144,7 @@ with tab1 :
         #nom de l'artiste
         st.markdown('<p style="color: #4B0082; font-size: 35px; text-align: center;">Vegedream</p>', unsafe_allow_html=True)
          # texte
-        st.markdown('<p style="color: #25316D; font-size: 16px; text-align: center;">Pourquoi est-il dans notre sélection : La popularité acquise par Vegedream avec ses succès et ses collaborations diverses sera un plus pour notre festival. En mars 2021 il revient sur les téléchargements avec son single “Touché dans le coeur” mais c’est surtout avec la coupe du monde que son titre phare brillera avec des millions de téléchargements par jour</p>', unsafe_allow_html=True)
+        st.markdown('<p style="color: #25316D; font-size: 16px; text-align: center;">Pourquoi est-il dans notre sélection : La popularité acquise par Vegedream avec ses succès et ses collaborations diverses sera un plus pour notre festival. En mars 2021 il revient sur les écoutes en ligne avec son single “Touché dans le coeur” mais c’est surtout avec la coupe du monde que son titre phare brillera avec des millions de streams par jour</p>', unsafe_allow_html=True)
         st.markdown('<p style="color: #25316D; font-size: 16px; text-align: center;">Style musical : Rap</p>', unsafe_allow_html=True)
         st.markdown('<p style="color: #25316D; font-size: 16px; text-align: center;">Programmation : Star française</p>', unsafe_allow_html=True)
 

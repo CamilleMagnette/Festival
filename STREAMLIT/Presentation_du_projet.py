@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 
-
-
 st.set_page_config(
     page_title="HACKATHON",
     layout="wide",
@@ -15,19 +13,17 @@ st.markdown("# FESTIVAL LES PETITS POUCETS 🎼")
 st.subheader('Les 5 et 6 juillet 2023')
 
 # Afficher notre logo dans le sidebar
-#notre_logo = Image.open('logo.png')
-#image_container = st.container()
-#with image_container:
-    #st.sidebar.image(notre_logo, width=300)
+notre_logo = Image.open('STREAMLIT/images/logo.png')
+image_container = st.container()
+with image_container:
+    st.sidebar.image(notre_logo, width=300)
 
 # IMPORTER LE DATAFRAME
 #link = "blablabla"
 #df = pd.read_csv(link)
 
-
 # CREER DES TAB 
 tab1, tab2, tab3, tab4 = st.tabs(['BESOIN CLIENT', 'ENJEUX & PROBLEMATIQUE', 'EQUIPE VASCALYTICS', 'NOTRE PROPOSITION PAR ETAPE'])
-
 
 # TRAVAILLER SUR LES TAB 
 
@@ -41,9 +37,11 @@ with tab1 :
 
 
     # PHOTO CONCERT EXTERIEUR    
-    image_coeur = Image.open('images/image_festival_coeur.jpg')
     
     image_container = st.container()
+
+    image_coeur = Image.open('STREAMLIT/images/image_festival_coeur.jpg')
+    
     with image_container:
         st.image(image_coeur, width=900)
 
@@ -73,12 +71,12 @@ with tab3 :
     st.write("Nous mettons à votre disposition 6 jeunes consultants pendant 2 jours ") 
 
     # PHOTO CONCERT EXTERIEUR    
-    vincent = Image.open('images/Vincent.png')
-    chrysanthe = Image.open('images/Chrysanthe.jpeg')
-    camille = Image.open('images/Camille.jpg')
-    stephanie = Image.open('images/Stephanie.jpeg')
-    anthony = Image.open('images/Anthony.jpeg')
-    amine = Image.open('images/Amine.jpeg')
+    vincent = Image.open('STREAMLIT/images/Vincent.png')
+    chrysanthe = Image.open('STREAMLIT/images/Chrysanthe.jpeg')
+    camille = Image.open('STREAMLIT/images/Camille.jpg')
+    stephanie = Image.open('STREAMLIT/images/Stephanie.jpeg')
+    anthony = Image.open('STREAMLIT/images/Anthony.jpeg')
+    amine = Image.open('STREAMLIT/images/Amine.jpeg')
 
     image_container = st.container()
 
@@ -125,7 +123,7 @@ with tab4 :
     col1, col2 = st.columns(2)
 
     with col1 :
-        lunettes = Image.open('images/image_lunette.jpg')
+        lunettes = Image.open('STREAMLIT/images/image_lunette.jpg')
         st.image(lunettes, width=400)
         
     with col2 :
@@ -137,7 +135,3 @@ with tab4 :
         #st.write("3) Performance et positionnement des artistes managés") 
         st.write("3) Recommandation d'artistes à pousser pour le festival") 
         st.write("4) Recommandation de programmation sur deux jours") 
-
-    
-    
-# METHODOLOGIE : mapping à présenter 

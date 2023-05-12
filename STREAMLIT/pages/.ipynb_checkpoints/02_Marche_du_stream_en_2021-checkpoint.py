@@ -102,7 +102,7 @@ with tab1 :
     
 with tab2 : 
     
-    st.subheader('Morceaux les plus streamés sur Spotify en 2021')
+    st.subheader('Record de streams sur une journée en 2021 par titre')
     
     # création de la grille horizontale
     col1, col2 = st.columns(2)
@@ -161,10 +161,10 @@ with tab2 :
         
 with tab3 : 
     
-    st.subheader('Distribution des streams en 2021 par artiste (dernier quartile uniquement)')
+    st.subheader('Distribution des records de streams journalier en 2021 par artiste (dernier quartile uniquement)')
     
-    st.markdown('Une pépite en france = Entre 230 et 350 stream avec une forte progression')
-    st.markdown('Une pépite total monde = Entre 2,2M et 3M stream avec une forte progression')
+    #st.markdown('Une pépite en france = Entre 230 et 350 stream avec une forte progression')
+    #st.markdown('Une pépite total monde = Entre 2,2M et 3M stream avec une forte progression')
 
 
     df3 = df_top_200

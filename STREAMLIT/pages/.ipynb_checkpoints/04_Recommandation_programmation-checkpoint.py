@@ -40,7 +40,7 @@ with tab1 :
     
     with col1 : 
 
-        st.subheader('Trouver un bon équilibre entre pépites et étoile')
+        st.subheader('Trouver un bon équilibre entre pépites et étoiles')
         st.write(' ')
 
         image_reco_prog = Image.open('images/reco progr.png')
