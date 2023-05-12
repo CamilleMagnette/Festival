@@ -4,7 +4,7 @@ import pandas as pd
 
 
 # Afficher notre logo dans le sidebar
-notre_logo = Image.open('images/logo.png')
+notre_logo = Image.open('STREAMLIT/images/logo.png')
 image_container = st.container()
 with image_container:
     st.sidebar.image(notre_logo, width=300)

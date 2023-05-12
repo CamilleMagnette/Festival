@@ -8,7 +8,7 @@ from PIL import Image
 
 
 # Afficher notre logo dans le sidebar
-notre_logo = Image.open('images/logo.png')
+notre_logo = Image.open('STREAMLIT/images/logo.png')
 image_container = st.container()
 with image_container:
     st.sidebar.image(notre_logo, width=300)
@@ -20,9 +20,9 @@ st.subheader('Les talents du moment...et jeunes talents à venir')
 
 
 # Importer le dataset TOP 2000 : Janvier 2017 à dec 2021
-df_top_200 = pd.read_csv("datasets/top_200.csv", sep = ",")
+df_top_200 = pd.read_csv("STREAMLIT/datasets/top_200.csv", sep = ",")
 # Importer le dataset Amine : 
-df_dataset = pd.read_csv("datasets/dataset.csv", sep = ",")
+df_dataset = pd.read_csv("STREAMLIT/datasets/dataset.csv", sep = ",")
 
 # Afficher le dataframe
 # st.write(df_top_200)
