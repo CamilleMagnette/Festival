@@ -12,7 +12,7 @@ Problémtique et analyse libre !
 
 **Délai** : 28h
 
-**Programmation** :   Python (plotly, Seaborn) avec JupiterLab, Streamlit, github 
+**Programmation** :   Python (plotly, Seaborn) avec JupyterLab, Streamlit, github 
 
 
 ## Présentation finale :
