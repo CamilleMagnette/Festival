@@ -15,6 +15,8 @@ import pandas as pd
 
 df = pd.read_csv('STREAMLIT/datasets/top_200.csv')
 ##### images 
+
+
 logopython = Image.open('STREAMLIT/images/logopython.png')
 logoseaborn = Image.open('STREAMLIT/images/logoseaborn.png')
 logoplotly = Image.open('STREAMLIT/images/logoplotly.png')
@@ -31,6 +33,7 @@ st.markdown("# DONNÉES ET OUTILS 🔧")
 # Ajouter espaces
 #st.markdown("<br><br>", unsafe_allow_html=True)
 
+main_container = st.container()
 
 data_container, sep_container, stack_container = main_container.columns([6, 1, 3])
     
