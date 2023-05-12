@@ -7,10 +7,10 @@ import numpy as np
 import seaborn as sns
 
 # Importer le dataset TOP 2000 : Janvier 2017 à dec 2021
-df_top_200 = pd.read_csv("datasets/top_200.csv", sep = ",")
+df_top_200 = pd.read_csv("STREAMLIT/datasets/top_200.csv", sep = ",")
 
 # Afficher notre logo dans le sidebar
-notre_logo = Image.open('images/logo.png')
+notre_logo = Image.open('STREAMLIT/images/logo.png')
 image_container = st.container()
 with image_container:
     st.sidebar.image(notre_logo, width=300)
@@ -20,16 +20,16 @@ with image_container:
 
 
 ##### images 
-lisa = Image.open('images/lisa.jpg')
-doja = Image.open('images/doja.jpg')
-damso = Image.open('images/damso.jpg')
-bella = Image.open('images/bella.png')
-maneskinn = Image.open('images/maneskin.jpg')
-masked = Image.open('images/masked.jpg')
-ckay = Image.open('images/ckay.jpeg')
-kali = Image.open('images/kaliu.jpg')
-vege = Image.open('images/vege.jpeg')
-ziak = Image.open('images/ziak.jpg')
+lisa = Image.open('STREAMLIT/images/lisa.jpg')
+doja = Image.open('STREAMLIT/images/doja.jpg')
+damso = Image.open('STREAMLIT/images/damso.jpg')
+bella = Image.open('STREAMLIT/images/bella.png')
+maneskinn = Image.open('STREAMLIT/images/maneskin.jpg')
+masked = Image.open('STREAMLIT/images/masked.jpg')
+ckay = Image.open('STREAMLIT/images/ckay.jpeg')
+kali = Image.open('STREAMLIT/images/kaliu.jpg')
+vege = Image.open('STREAMLIT/images/vege.jpeg')
+ziak = Image.open('STREAMLIT/images/ziak.jpg')
 
 st.markdown("# VOS 10 ARTISTES A PROMOUVOIR 💜 ")
 # st.subheader('BLABLABLA')
