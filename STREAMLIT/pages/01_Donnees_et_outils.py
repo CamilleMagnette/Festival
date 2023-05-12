@@ -16,10 +16,10 @@ with image_container:
 df = pd.read_csv('datasets/top_200.csv')
 
 ##### images 
-logopython = Image.open('images/logopython.png')
-logoseaborn = Image.open('images/logoseaborn.png')
-logoplotly = Image.open('images/logoplotly.png')
-logostream = Image.open('images/logostreamlit.png')
+logopython = Image.open('festival/STREAMLIT/images/logopython.png')
+logoseaborn = Image.open('festival/STREAMLIT/images/logoseaborn.png')
+logoplotly = Image.open('festival/STREAMLIT/images/logoplotly.png')
+logostream = Image.open('festival/STREAMLIT/images/logostreamlit.png')
 
 st.markdown("# DONNÉES ET OUTILS 🔧")
 # st.subheader('BLABLABLA')
