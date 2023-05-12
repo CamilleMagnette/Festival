@@ -11,20 +11,21 @@ import pandas as pd
 df = pd.read_csv('datasets/top_200.csv')
 
 ##### images 
-schema = Image.open('images/exemple_database.png')
 logopython = Image.open('images/logopython.png')
 logoseaborn = Image.open('images/logoseaborn.png')
 logoplotly = Image.open('images/logoplotly.png')
 logostream = Image.open('images/logostreamlit.png')
 
+st.markdown("# DONNÉES ET OUTILS")
+# st.subheader('BLABLABLA')
 
 ##########################################################################################################
 ###### Debut de la page
 # afficher un titre centrer
-st.markdown('<p style="color: #25316D; font-size: 40px; text-align: center;">Donnees et outils</p>', unsafe_allow_html=True)
+#st.markdown('<p style="color: #25316D; font-size: 40px; text-align: center;">DONNÉES ET OUTILS</p>', unsafe_allow_html=True)
 
 # Ajouter espaces
-st.markdown("<br><br>", unsafe_allow_html=True)
+#st.markdown("<br><br>", unsafe_allow_html=True)
 
 main_container = st.container()
 
@@ -36,24 +37,31 @@ with data_container:
     st.markdown("<br>", unsafe_allow_html=True)
 
     # afficher un titre centrer
-    st.markdown('<p style="color: #25316D; font-size: 25px; text-align: center; text-decoration: underline;">Les donnees</p>', unsafe_allow_html=True)
+    #st.markdown('<p style="color: #25316D; font-size: 25px; text-align: center; text-decoration: underline;">Données</p>', unsafe_allow_html=True)
+    st.subheader('Données')
 
+    
     # Ajouter espaces
-    st.markdown("<br>", unsafe_allow_html=True)
+    #st.markdown("<br>", unsafe_allow_html=True)
     
     # texte
-    st.markdown('<p style="color: #25316D; font-size: 16px;">Pour realiser notre projet nous avons recuperer des donnees publiques provenant de Spotify</p>', unsafe_allow_html=True)
-    
-    # Ajouter espaces
-    st.markdown("<br>", unsafe_allow_html=True)
-        
-    st.markdown('<p style="color: #25316D; font-size: 16px;">https://www.kaggle.com/datasets/dhruvildave/spotify-charts</p>', unsafe_allow_html=True)
-    
-    # Ajouter espaces
-    st.markdown("<br>", unsafe_allow_html=True)
+    #st.markdown('<p style="color: #25316D; font-size: 16px;">Données publiques provenant de Spotify</p>', unsafe_allow_html=True)
+    st.write('Données publiques provenant de Spotify')
 
-    st.markdown('<p style="color: #25316D; font-size: 16px;">Voici un extrait du Dataset final que nous avons utiliser pour notre algorithme de recommandation d\'artiste </p>', unsafe_allow_html=True)
     
+    # Ajouter espaces
+    #st.markdown("<br>", unsafe_allow_html=True)
+        
+    #st.markdown('<p style="color: #25316D; font-size: 16px;">Source : https://www.kaggle.com/datasets/dhruvildave/spotify-charts</p>', unsafe_allow_html=True)
+    st.write('Source : https://www.kaggle.com/datasets/dhruvildave/spotify-charts')
+
+             
+    # Ajouter espaces
+    #st.markdown("<br>", unsafe_allow_html=True)
+
+    #st.markdown('<p style="color: #25316D; font-size: 16px;">Extrait du Dataset final utilisé afin de construire notre algorithme de recommandation d\'artistes </p>', unsafe_allow_html=True)
+    st.write('Extrait du Dataset final utilisé afin de construire notre algorithme de recommandation d\'artistes')
+
     # Ajouter espaces
     st.markdown("<br>", unsafe_allow_html=True)
 
@@ -65,45 +73,47 @@ with stack_container:
     st.markdown("<br>", unsafe_allow_html=True)
 
     # afficher un titre centrer
-    st.markdown('<p style="color: #25316D; font-size: 25px; text-align: center; text-decoration: underline;">La stack technique</p>', unsafe_allow_html=True)
+    #st.markdown('<p style="color: #25316D; font-size: 25px; text-align: center; text-decoration: underline;">Stack technique</p>', unsafe_allow_html=True)
+    st.subheader('Stack technique')
+
+    
     # Ajouter espaces
-    st.markdown("<br>", unsafe_allow_html=True)
+    #st.markdown("<br>", unsafe_allow_html=True)
 
     # texte
-    st.markdown('<p style="color: #25316D; font-size: 16px;text-align: center;">Pour realiser notre projet nous avons utilise differents outils :</p>', unsafe_allow_html=True)
+    #st.markdown('<p style="color: #25316D; font-size: 16px;text-align: center;">Pour realiser notre projet nous avons utilise differents outils :</p>', unsafe_allow_html=True)
 
 
     # Ajouter espaces
-    st.markdown("<br>", unsafe_allow_html=True)# Ajouter espaces
+    #st.markdown("<br>", unsafe_allow_html=True)# Ajouter espaces
 
 
     # texte presentation
-    st.markdown('<p style=" font-family:Roboto Condensed:ital;text-align: center; font-size: 16px;">traitement des donnees :</p>', unsafe_allow_html=True)
-
+    st.markdown('<p style=" font-family:Roboto Condensed:ital;text-align: center; font-size: 16px;">traitement des données :</p>', unsafe_allow_html=True)
 
     # logo
-    st.image(logopython, width=280)
+    st.image(logopython, width=200)
 
     # Ajouter espaces
-    st.markdown("<br>", unsafe_allow_html=True)# Ajouter espaces
+    #st.markdown("<br>", unsafe_allow_html=True)# Ajouter espaces
     
-    st.markdown('<p style=" font-family:Roboto Condensed:ital; text-align: center; font-size: 16px;">Realisation de graphique:</p>', unsafe_allow_html=True)
+    st.markdown('<p style=" font-family:Roboto Condensed:ital; text-align: center; font-size: 16px;">Réalisation des graphiques:</p>', unsafe_allow_html=True)
         
     # logo
-    st.image(logoplotly, width=300)
+    st.image(logoplotly, width=250)
     # logo
-    st.image(logoseaborn, width=300)
+    st.image(logoseaborn, width=250)
     
     # Ajouter espaces
-    st.markdown("<br><br>", unsafe_allow_html=True)
+    #st.markdown("<br><br>", unsafe_allow_html=True)
     
 
     # texte presentation
-    st.markdown('<p style=" font-family:Roboto Condensed:ital; text-align: center; font-size: 16px;">Realisation web-app:</p>', unsafe_allow_html=True)
+    st.markdown('<p style=" font-family:Roboto Condensed:ital; text-align: center; font-size: 16px;">Réalisation web-app:</p>', unsafe_allow_html=True)
         
 
     # logo
-    st.image(logostream, width=350)
+    st.image(logostream, width=250)
         
 
     

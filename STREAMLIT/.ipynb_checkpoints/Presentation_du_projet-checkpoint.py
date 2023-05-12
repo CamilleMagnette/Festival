@@ -32,7 +32,7 @@ with tab1 :
 
     st.subheader('PROPOSITION DE PROGRAMMATION MUSICALE')
 
-    st.write("Jeune label en quête de notoriété vous souhaiter promouvoir vos artistes via l'organisation d'un festival musical.") 
+    st.write("Jeune label en quête de notoriété vous souhaitez promouvoir vos artistes via l'organisation d'un festival musical.") 
 
 
     # PHOTO CONCERT EXTERIEUR    
@@ -49,8 +49,8 @@ with tab2 :
 
     st.subheader('VOS ENJEUX')
 
-    st.write("1) 💰 Vous rémunérer") 
-    st.write("2) 🔈 Gagner en visibilité avec des artistes reconnus") 
+    st.write("1) 🔈 Gagner en visibilité avec des artistes reconnus") 
+    st.write("2) 💰 Vous rémunérer") 
     st.write("3) 🔦 Faire découvrir de nouveaux talents") 
     st.write("4) 🔎 Trouver un équilibre entre tête d'affiche et nouveaux talents") 
 
@@ -127,11 +127,11 @@ with tab4 :
 
         st.subheader('Sommaire')
 
-        st.write("1) Nos sources de données") 
-        st.write("2) Etat des lieux du marché musical actuel") 
-        st.write("3) Performance et positionnement des artistes managés") 
-        st.write("4) Recommandation d'artistes à pousser pour le festival") 
-        st.write("5) Recommandation de programmation sur deux jours") 
+        st.write("1) Les sources de données et outils utilisés") 
+        st.write("2) Etat des lieux du marché du stream musical actuel") 
+        #st.write("3) Performance et positionnement des artistes managés") 
+        st.write("3) Recommandation d'artistes à pousser pour le festival") 
+        st.write("4) Recommandation de programmation sur deux jours") 
 
     
     
