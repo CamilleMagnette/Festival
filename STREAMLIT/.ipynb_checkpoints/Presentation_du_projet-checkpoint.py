@@ -14,6 +14,11 @@ st.set_page_config(
 st.markdown("# FESTIVAL LES PETITS POUCETS 🎼")
 st.subheader('Les 5 et 6 juillet 2023')
 
+# Afficher notre logo dans le sidebar
+notre_logo = Image.open('images/logo.png')
+image_container = st.container()
+with image_container:
+    st.sidebar.image(notre_logo, width=300)
 
 # IMPORTER LE DATAFRAME
 #link = "blablabla"
