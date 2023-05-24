@@ -15,7 +15,7 @@ Python (plotly, Seaborn) avec JupyterLab, Streamlit, github
 
 ## 🎬 Source des données :  
 <img src="https://www.scdn.co/i/_global/open-graph-default.png" width=20% height=20%>
-[kaggle]([https://datasets.imdbws.com/](https://www.kaggle.com/datasets/dhruvildave/spotify-charts))   
+[kaggle](https://datasets.imdbws.com/](https://www.kaggle.com/datasets/dhruvildave/spotify-charts)
 
 
 ## 📎 ✅ Méthodologie technique :
