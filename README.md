@@ -14,7 +14,8 @@ Python (plotly, Seaborn) avec JupyterLab, Streamlit, github
 
 
 ## 🎬 Source des données :  
-<img src="https://www.scdn.co/i/_global/open-graph-default.png" width=20% height=20%>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Spotify_logo_with_text.svg/1200px-Spotify_logo_with_text.svg.png" width=15% height=15%>                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png" width=10% height=10%>
+
 Kaggle : https://www.kaggle.com/datasets/dhruvildave/spotify-charts
 
 
@@ -29,8 +30,5 @@ Kaggle : https://www.kaggle.com/datasets/dhruvildave/spotify-charts
   
  4) Publication de l'interface de présentation Streamlit :
 
-### [🌸🌸 LIEN DE L'INTERFACE 🌸🌸](https://camillemagnette-festival-streamlitpresentation-du-projet-pniqto.streamlit.app/)
-
-
- <img src="https://camillemagnette-festival-streamlitpresentation-du-projet-pniqto.streamlit.app/~/+/media/da134a7208e9bd3730b90cfae7b800979ea87235000fea9550d68430.png" width=20% height=20%>
+### [🌸🌸 **LIEN DE L'INTERFACE** 🌸🌸](https://camillemagnette-festival-streamlitpresentation-du-projet-pniqto.streamlit.app/)
 
