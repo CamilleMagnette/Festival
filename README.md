@@ -32,3 +32,6 @@ Kaggle : https://www.kaggle.com/datasets/dhruvildave/spotify-charts
   [Page 5](https://github.com/CamilleMagnette/festival/blob/main/STREAMLIT/pages/04_Recommandation_programmation.py)
   
 4) [Publication de l'interface de présentation Streamlit](https://camillemagnette-festival-streamlitpresentation-du-projet-pniqto.streamlit.app/)
+
+<img src="https://camillemagnette-festival-streamlitpresentation-du-projet-pniqto.streamlit.app/~/+/media/da134a7208e9bd3730b90cfae7b800979ea87235000fea9550d68430.png" width=40% height=40%>
+
