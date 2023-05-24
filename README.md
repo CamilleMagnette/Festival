@@ -28,6 +28,9 @@ Outils principaux : Pandas, Matplotlib, jupyterLab
 -[base IMDb](https://datasets.imdbws.com/)   
 -[Explication datasets](https://www.imdb.com/interfaces/)
 
+# ![alt tag](https://www.scdn.co/i/_global/open-graph-default.png | width=100)
+
+<img src="https://www.scdn.co/i/_global/open-graph-default.png" width=20% height=20%>
 
 ## 📎 Méthodologie technique :
 
