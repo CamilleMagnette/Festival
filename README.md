@@ -1,4 +1,4 @@
-# 🎥 Recommandation de programmation de festival :
+# 🎼 Recommandation de programmation de festival :
 
 hackathon réalisé en 1 jour et demi lors de ma formation à la Wild Code School.
 
@@ -9,41 +9,26 @@ Problémtique et analyse libre !
 
 ## ⌛ Délai : 28h
 
-## ✅ Etapes : 
-
-#### Semaine 1 :  
-Appropriation et première exploration des données     
-Outils principaux : Pandas, Matplotlib, jupyterLab   
-
-💪 🕺
-
-💡 📊
-
-[LIEN STREAMLIT DE LA PRESENTATION](https://camillemagnette-festival-streamlitpresentation-du-projet-pniqto.streamlit.app/)
-
-**Programmation** :   Python (plotly, Seaborn) avec JupyterLab, Streamlit, github 
+## ⚙️ Outils principaux : 
+Python (plotly, Seaborn) avec JupyterLab, Streamlit, github 
 
 
 ## 🎬 Source des données :  
--[base IMDb](https://datasets.imdbws.com/)   
--[Explication datasets](https://www.imdb.com/interfaces/)
-
-# ![alt tag](https://www.scdn.co/i/_global/open-graph-default.png | width=100)
-
 <img src="https://www.scdn.co/i/_global/open-graph-default.png" width=20% height=20%>
+[kaggle]([https://datasets.imdbws.com/](https://www.kaggle.com/datasets/dhruvildave/spotify-charts))   
 
-## 📎 Méthodologie technique :
 
-1) [Nettoyage de l'ensemble des fichiers sources](https://github.com/CamilleMagnette/Systeme_de_recommandation_machine_learning/blob/main/JupyterlabNotebooks/Projet%202%20-%20Nettoyage%20des%20donn%C3%A9es.ipynb) pour n'en former que deux : 
--  un premier très macro pour réaliser notre analyse,
--  un second pour réaliser notre algorithme
+## 📎 ✅ Méthodologie technique :
 
-2) [Analyse de la base de données](https://github.com/CamilleMagnette/Systeme_de_recommandation_machine_learning/blob/main/JupyterlabNotebooks/Projet%202%20-%20Graphiques%20Plotly%20avec%20donn%C3%A9es%20nettoy%C3%A9es.ipynb) via le 1er fichier nettoyé : mise en forme de graphiques via [datapane](https://cloud.datapane.com/reports/VkGQlN3/exploration-des-donn%C3%A9es/)
+1) [Choix du dataset](https://github.com/CamilleMagnette/festival/blob/main/JUPITERLAB/notebook%20choix%20du%20dataset%20et%20problematique.ipynb)
 
-3) [Préparation de notre 2nd fichier nettoyé pour le machine learning](https://github.com/CamilleMagnette/Systeme_de_recommandation_machine_learning/blob/main/JupyterlabNotebooks/Projet%202-%20Pr%C3%A9paration%20du%20fichier%20pour%20le%20machine%20learning.ipynb) : transformation en format pickle et split des colonnes non numériques 
+2) [Analyse de la base de données 📊](https://github.com/CamilleMagnette/festival/blob/main/JUPITERLAB/Analyse_des_datasets_hackathon.ipynb)
 
-4) [Tests de machine learning](http://localhost:8891/lab/tree/Documents/FORMATION%20DATA%20ANALYST/COURS%20DATA%20ANALYST/PROJET%202/JUPITERLAB%20NOTEBOOKS/Projet%202%20-%20Machine%20learning%20TEST%20ACTEURS.ipynb) : normalisation des données et mise en place d'un algorithme basé sur les plus proches voisins (algorithme K-nearest neighbors (kNN))
-
-5) [Mise en place de l’application utilisateur Streamlit](https://github.com/CamilleMagnette/Systeme_de_recommandation_machine_learning/blob/main/app_acteurs.py)
-
-6) [Publication de l'interface utilisateur Streamlit](https://camillemagnette-systeme-de-recommandation-ma-app-acteurs-k992u6.streamlit.app/)
+3) Mise en place de l’application de présentation Streamlit 👨‍💻  :
+  [Page 1](https://github.com/CamilleMagnette/festival/blob/main/STREAMLIT/Presentation_du_projet.py)
+  [Page 2](https://github.com/CamilleMagnette/festival/blob/main/STREAMLIT/pages/01_Donnees_et_outils.py)
+  [Page 3](https://github.com/CamilleMagnette/festival/blob/main/STREAMLIT/pages/02_Marche_du_stream_en_2021.py)
+  [Page 4](https://github.com/CamilleMagnette/festival/blob/main/STREAMLIT/pages/03_Recommandation_dartistes.py)
+  [Page 5](https://github.com/CamilleMagnette/festival/blob/main/STREAMLIT/pages/04_Recommandation_programmation.py)
+  
+4) [Publication de l'interface de présentation Streamlit](https://camillemagnette-festival-streamlitpresentation-du-projet-pniqto.streamlit.app/))
