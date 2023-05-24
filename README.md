@@ -15,7 +15,7 @@ Python (plotly, Seaborn) avec JupyterLab, Streamlit, github
 
 ## 🎬 Source des données :  
 <img src="https://www.scdn.co/i/_global/open-graph-default.png" width=20% height=20%>
-[kaggle](https://datasets.imdbws.com/](https://www.kaggle.com/datasets/dhruvildave/spotify-charts)
+Kaggle : https://www.kaggle.com/datasets/dhruvildave/spotify-charts
 
 
 ## 📎 ✅ Méthodologie technique :
@@ -31,4 +31,4 @@ Python (plotly, Seaborn) avec JupyterLab, Streamlit, github
   [Page 4](https://github.com/CamilleMagnette/festival/blob/main/STREAMLIT/pages/03_Recommandation_dartistes.py)
   [Page 5](https://github.com/CamilleMagnette/festival/blob/main/STREAMLIT/pages/04_Recommandation_programmation.py)
   
-4) [Publication de l'interface de présentation Streamlit](https://camillemagnette-festival-streamlitpresentation-du-projet-pniqto.streamlit.app/))
+4) [Publication de l'interface de présentation Streamlit](https://camillemagnette-festival-streamlitpresentation-du-projet-pniqto.streamlit.app/)
